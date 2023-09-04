@@ -21,7 +21,7 @@
 <script ts setup>
 import { ref } from 'vue'
 import '@/styles/uiStyle.css'
-import Kousuan2yConfig from '@/views/kousuan/kousuan2yConfig.vue'
+import Kousuan2yConfig from '@/views/kousuan/kousuan2y/kousuan2yConfig.vue'
 const kousuanRef = ref()
 const openKouSuan = () => {
 	kousuanRef.value.show()

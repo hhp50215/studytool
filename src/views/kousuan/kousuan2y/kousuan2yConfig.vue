@@ -70,7 +70,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import Kousuan2yResult from '@/views/kousuan/kousuan2yResult.vue'
+import Kousuan2yResult from '@/views/kousuan/kousuan2y/kousuan2yResult.vue'
 import kousuan2yService from '@/services/kousuan/kousuan2yService'
 const formLabelWidth = '140px'
 const kousuanResultRef = ref()
