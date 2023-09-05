@@ -6,7 +6,7 @@
 			</div>
 		</template>
 		<div style="height: 600px; overflow-y: auto">
-			<table id="printArea" style="width: 100%">
+			<table id="printArea2" style="width: 100%">
 				<tr>
 					<td colspan="3" style="text-align: center">姓名：_______________&nbsp;&nbsp;&nbsp;&nbsp; 日期：_______________</td>
 				</tr>
@@ -34,7 +34,7 @@
 		</div>
 		<template #footer>
 			<span class="dialog-footer">
-				<el-button v-print="'#printArea'" type="primary">打印</el-button>
+				<el-button v-print="'#printArea2'" type="primary">打印</el-button>
 				<el-button type="primary" @click="show">重新生成</el-button>
 			</span>
 		</template>
