@@ -31,9 +31,9 @@ export default class kousuan2yService {
 		}
 		return {
 			tmsl: '25',
-			cfysdyzxz: '1',
-			cfysdyzdz: '10',
-			ysdyzxz: '10',
+			cfysdyzxz: '2',
+			cfysdyzdz: '9',
+			ysdyzxz: '2',
 			ysdyzdz: '50',
 			ysjgzdz: '100',
 			ssbxbh: '',
