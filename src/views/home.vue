@@ -11,8 +11,11 @@
 						<el-button class="m-button" type="primary" plain @click="openKouSuan2y()">简单口算生成(2元运算)</el-button>
 						<kousuan-2y-config ref="kousuan2yRef" />
 						&nbsp;&nbsp;
-						<el-button class="m-button" type="primary" plain @click="openKouSuan3y()">口算生成(3元运算)</el-button>
+						<el-button class="m-button" type="primary" plain @click="openKouSuan3y()">口算生成(3元加减运算)</el-button>
 						<kousuan-3y-config ref="kousuan3yRef" />
+						&nbsp;&nbsp;
+						<el-button class="m-button" type="primary" plain @click="openCfKouSuan3y()">乘法加减法混合(3元运算)</el-button>
+						<cf-kousuan-3y-config ref="cfKousuan3yRef" />
 					</div>
 				</div>
 			</div>
@@ -24,12 +27,17 @@ import { ref } from 'vue'
 import '@/styles/uiStyle.css'
 import Kousuan2yConfig from '@/views/kousuan/kousuan2y/kousuan2yConfig.vue'
 import Kousuan3yConfig from '@/views/kousuan/kousuan3y/kousuan3yConfig.vue'
+import CfKousuan3yConfig from '@/views/kousuan/cfkousuan3y/cfKousuan3yConfig.vue'
 const kousuan2yRef = ref()
 const kousuan3yRef = ref()
+const cfKousuan3yRef = ref()
 const openKouSuan2y = () => {
 	kousuan2yRef.value.show()
 }
 const openKouSuan3y = () => {
 	kousuan3yRef.value.show()
+}
+const openCfKouSuan3y = () => {
+	cfKousuan3yRef.value.show()
 }
 </script>

@@ -27,7 +27,7 @@ export default class kousuan2yService {
 		}
 		return {
 			sslx: ['1'],
-			tmsl: '20',
+			tmsl: '25',
 			ysdyzxz: '1',
 			ysdyzdz: '10',
 			ysjgzdz: '99999',
