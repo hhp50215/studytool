@@ -10,8 +10,6 @@
 				<el-checkbox-group v-model="state.form.sslx">
 					<el-checkbox label="1" border>加法</el-checkbox>
 					<el-checkbox label="2" border>减法</el-checkbox>
-					<el-checkbox label="3" border>乘法</el-checkbox>
-					<el-checkbox label="4" border>除法</el-checkbox>
 				</el-checkbox-group>
 			</el-form-item>
 			<el-form-item label="题目数量" :label-width="formLabelWidth">
@@ -54,6 +52,7 @@
 			<el-form-item label="算式必须含有" :label-width="formLabelWidth">
 				<el-select v-model="state.form.ssbxbh" placeholder="算式必须含有">
 					<el-option label="不限制" value="" />
+					<el-option label="大于1的数" value="1" />
 					<el-option label="大于5的数" value="5" />
 					<el-option label="大于10的数" value="10" />
 				</el-select>
@@ -64,14 +63,14 @@
 				<el-button type="primary" @click="genQuestion">生成口算题目</el-button>
 			</span>
 		</template>
-		<kousuan-2y-result ref="kousuanResultRef" />
+		<kousuan-3y-result ref="kousuanResultRef" />
 	</el-dialog>
 </template>
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import Kousuan2yResult from '@/views/kousuan/kousuan2y/kousuan2yResult.vue'
-import kousuan2yService from '@/services/kousuan/kousuan2yService'
+import Kousuan3yResult from '@/views/kousuan/kousuan3y/kousuan3yResult.vue'
+import kousuan3yService from '@/services/kousuan/kousuan3yService'
 const formLabelWidth = '140px'
 const kousuanResultRef = ref()
 const state = reactive({
@@ -87,10 +86,10 @@ const state = reactive({
 })
 const show = () => {
 	state.dialogVisible = true
-	state.form = kousuan2yService.readConfig()
+	state.form = kousuan3yService.readConfig()
 }
 const genQuestion = () => {
-	kousuan2yService.saveConfig(state.form)
+	kousuan3yService.saveConfig(state.form)
 	kousuanResultRef.value.show()
 }
 defineExpose({
